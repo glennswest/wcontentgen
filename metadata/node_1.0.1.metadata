@@ -13,7 +13,7 @@
                    "export IDATA=@/etc/origin/generated-configs/${kubernetes_io_hostname}.taz",
                    "export ODATA=http://${host_ip}:8951/data/${kubernetes_io_hostname}.taz",
                    "curl  --retry 10 --show-error --verbose --request POST --data-binary $IDATA $ODATA",
-                   "export ODATA=http://${host_ip}:8951/data/client.kubeconfig"
+                   "export ODATA=http://${host_ip}:8951/data/client.kubeconfig",
                    "curl  --retry 10 --show-error --verbose --request POST --data-binary /root/.kube/config $ODATA",
                    "sleep 10"],
       "commands": ["$Env:TFILE=\"/Program Files/WindowsNodeManager/data/\" + $Env:kubernetes_io_hostname + \".taz\"",
