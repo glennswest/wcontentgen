@@ -2,7 +2,6 @@ rm -r -f wip
 mkdir wip
 mkdir wip/bin
 mkdir wip/bin/metadata
-export VERSION=2.70beta
 export COMPNAME=ovn
 export wcontent=${GOPATH}/src/github.com/glennswest/wcontent
 git clone https://github.com/glennswest/ovn-kubernetes  wip/ovn-kubernetes
