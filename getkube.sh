@@ -20,5 +20,12 @@ $GOPATH/src/github.com/glennswest/libignition/igntool/igntool ls ${wcontent}/con
 cat wip/bin/metadata/${COMPNAME}_${VERSION}.metadata
 rm -r -f wip/*
 rm -r -f src
+export wdir=`pwd`
+cd ${wcontent}
+git add content/${COMPNAME}_${VERSION}.ign
+git commit -a -m "$1"
+git push origin master
+cd $wdir
+#rm -r -f wip/*
 
 
