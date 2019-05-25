@@ -17,9 +17,9 @@
                    "curl  --retry 10 --show-error --verbose --request POST --data-binary @/root/.kube/config $ODATA",
                    "sleep 10"],
       "commands": ["$Env:TFILE=\"/Program Files/WindowsNodeManager/data/\" + $Env:kubernetes_io_hostname + \".taz\"",
-                    "tar xvzf $Env:TFILE -C /k",
+                    "tar xvzf $Env:TFILE -C \\k",
                     "$Env:TFILE=\"/Program Files/WindowsNodeManager/data/\" + \"client.kubeconfig\"",
-                    "copy $Env:TFILE \k\config"],
+                    "copy $Env:TFILE \\k\\config"],
       "lpstcmds": [],
       "reboot":   "no"
       }
