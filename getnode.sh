@@ -1,7 +1,7 @@
 rm -r -f wip/bin
 mkdir wip/bin
 mkdir wip/bin/metadata
-export VERSION=1.0.1
+export VERSION=1.0.2
 export COMPNAME=node
 export wcontent=${GOPATH}/src/github.com/glennswest/wcontent
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin)
