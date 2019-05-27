@@ -1,13 +1,12 @@
 {
-  "name":          "kube",
-  "version":       "v1.11.3",
-  "description":    "Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications.",
-  "install_message": "",
-  "package_url":     "https://dl.k8s.io/$VERSION/kubernetes-node-windows-amd64.tar.gz",
+  "name":          "nssm",
+  "version":       "2.24",
+  "description":    "NSSM Service Helper for Kublet etc",
+  "install_message": "Using NSSM Service Manager - 2.24 - https://nssm.cc/",
+  "package_url":     "https://nssm.cc/release/nssm-2.24.zip",
   "install": {
-      "lprecmds": [],
-      "commands": ["/bin/setup_kubelet_service.ps1"],
-      "lpstcmds": [],
+      "priority": 100,
+      "commands":  []
       "reboot":   "no"
       }
   "uninstall": {
@@ -34,3 +33,4 @@
       }
   "files": []
 }
+

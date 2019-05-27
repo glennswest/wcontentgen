@@ -3,6 +3,7 @@ echo $Env:lhost
 c:\bin\kubelet.exe --hostname-override="$Env:lhost" --v=6 `
     --resolv-conf="" `
     --allow-privileged=true `
+     --log-dir /k/logs `
     --enable-debugging-handlers `
     --cluster-dns="10.0.0.4,10.0.1.6" `
     --cluster-domain=cluster.local `
