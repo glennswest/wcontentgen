@@ -2,6 +2,9 @@ rm -r -f wip
 mkdir wip
 mkdir wip/bin
 mkdir wip/bin/metadata
+mkdir wip/k
+mkdir wip/k/logs
+touch wip/k/logs/kubeovn.log
 export COMPNAME=ovn
 export wcontent=${GOPATH}/src/github.com/glennswest/wcontent
 git clone https://github.com/glennswest/ovn-kubernetes  wip/ovn-kubernetes
@@ -14,6 +17,7 @@ rm ${wcontent}/content/${COMPNAME}_${VERSION}.ign
 cp metadata/${COMPNAME}_${VERSION}.metadata wip/bin/metadata
 cp files/${COMPNAME}_${VERSION}/bin/*.ps1 wip/bin
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign k)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool um ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin/metadata/${COMPNAME}_${VERSION}.metadata)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin/metadata)
 $GOPATH/src/github.com/glennswest/libignition/igntool/igntool ls ${wcontent}/content/${COMPNAME}_${VERSION}.ign
