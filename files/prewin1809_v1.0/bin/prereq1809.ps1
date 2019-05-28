@@ -37,6 +37,12 @@ $updates | ForEach-Object {
         $reboot = $true
     }
 }
+$env:item = "C:\bin"
+$systemPath = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") -split ';'
+if($env:item -notin $systemPath) {
+  $systemPath += $env:item
+  [System.Environment]::SetEnvironmentVariable("PATH", ($systemPath -join ';'), "Machine")
+  }
 # Reboot if needed
 if($reboot) {
     Write-Output "Rebooting computer"
