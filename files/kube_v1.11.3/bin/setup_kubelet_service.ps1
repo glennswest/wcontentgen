@@ -3,12 +3,12 @@ $scriptPath = "C:\bin\start_kubelet.ps1"
 $arguments = '-ExecutionPolicy Bypass -NoProfile -File "{0}"' -f $scriptPath
 $serviceName = "kubelet-ocp"
 nssm install $serviceName $powershell $arguments
-nssm set ocpkubelet DisplayName kubelet-ocp
-nssm set ocpkubelet Description Kubelet For OpenShift
-nssm set ocpkubelet Start SERVICE_AUTO_START
-nssm set ocpkubelet AppStdout C:\k\logs\kubelet.log
-nssm set ocpkubelet AppStderr C:\k\logs\kubelet.log
-nssm set ocpkubelet AppRotateFiles 1
-nssm set ocpkubelet AppRotateOnline 1
-nssm set ocpkubelet AppRotateSeconds 86400
-nssm set ocpkubelet AppRotateBytes 1048576
+nssm set ${serviceName} DisplayName kubelet-ocp
+nssm set ${serviceName} Description Kubelet For OpenShift
+nssm set ${serviceName} Start SERVICE_AUTO_START
+nssm set ${serviceName} AppStdout C:\k\logs\kubelet.log
+nssm set ${serviceName} AppStderr C:\k\logs\kubelet.log
+nssm set ${serviceName} AppRotateFiles 1
+nssm set ${serviceName} AppRotateOnline 1
+nssm set ${serviceName} AppRotateSeconds 86400
+nssm set ${serviceName} AppRotateBytes 1048576
