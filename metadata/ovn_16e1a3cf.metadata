@@ -13,7 +13,8 @@
                    "export IDATA=@/root/.keys/ovn.key",
                    "export ODATA=http://${host_ip}:8951/data/ovn.key",
                    "curl  --retry 10 --show-error --verbose --request POST --data-binary $IDATA $ODATA" ],
-      "commands": ["/bin/setup_kubeovn_service.ps1"],
+      "commands": ["/bin/genovnconf.ps1",
+                   "/bin/setup_kubeovn_service.ps1"],
       "lpstcmds": [],
       "reboot":   "no"
       }

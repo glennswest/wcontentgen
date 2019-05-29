@@ -1,0 +1,11 @@
+[default]
+encap-ip="$Env:host_ip"
+[kubernetes]
+apiserver="$Env:apiserver"  # kubernetes api server, or the load balanced address for the multiple api server case
+token="$Env:hosttoken"
+cacert=/k/ca.crt
+[ovnnorth]
+address="$Env:ovnnorth" # this master machine's IP address
+[ovnsouth]
+address="$Env:ovnsouth"
+
