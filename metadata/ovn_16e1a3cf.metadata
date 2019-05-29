@@ -8,7 +8,7 @@
       "lprecmds": ["oc create serviceaccount ovn",
                    "oc adm policy add-scc-to-user privileged -z ovn",
                    "oc adm policy add-cluster-role-to-user cluster-admin -z ovn",
-                   "mkdir -f /root/.keys",
+                   "mkdir /root/.keys",
                    "oc sa get-token ovn > /root/.keys/ovn.key",
                    "export IDATA=@/root/.keys/ovn.key",
                    "export ODATA=http://${host_ip}:8951/data/ovn.key",
