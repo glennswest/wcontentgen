@@ -4,6 +4,7 @@ mkdir wip/bin
 mkdir wip/bin/metadata
 mkdir wip/k
 mkdir wip/k/logs
+mkdir wip/cni
 touch wip/k/logs/kubeovn.log
 export COMPNAME=ovn
 export wcontent=${GOPATH}/src/github.com/glennswest/wcontent
@@ -16,6 +17,7 @@ echo $COMPNAME
 rm ${wcontent}/content/${COMPNAME}_${VERSION}.ign
 cp metadata/${COMPNAME}_${VERSION}.metadata wip/bin/metadata
 cp files/${COMPNAME}_${VERSION}/bin/*.ps1 wip/bin
+cp files/${COMPNAME}_${VERSION}/cni/* wip/cni
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign cni)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign k)
