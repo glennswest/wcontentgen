@@ -12,3 +12,4 @@ nssm set ${serviceName} AppRotateFiles 1
 nssm set ${serviceName} AppRotateOnline 1
 nssm set ${serviceName} AppRotateSeconds 86400
 nssm set ${serviceName} AppRotateBytes 1048576
+Start-Service kubelet-ocp
