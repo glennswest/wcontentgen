@@ -12,3 +12,4 @@ nssm set kubeovn AppRotateFiles 1
 nssm set kubeovn AppRotateOnline 1
 nssm set kubeovn AppRotateSeconds 86400
 nssm set kubeovn AppRotateBytes 1048576
+Start-Service kubeovn
