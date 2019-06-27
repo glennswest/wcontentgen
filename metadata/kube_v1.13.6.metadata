@@ -1,0 +1,36 @@
+{
+  "name":          "kube",
+  "version":       "v1.13.6",
+  "description":    "Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of containerized applications.",
+  "install_message": "",
+  "package_url":     "https://dl.k8s.io/v1.13.6/kubernetes-node-windows-amd64.tar.gz",
+  "install": {
+      "lprecmds": [],
+      "commands": ["mkdir /k/tmp","tar xvzf /k/tmp/kubernets.tar.gz /k/tmp","copy /k/tmp/kubernetes/node/bin/* /bin","Remove-Item /k/tmp -Force  -Recurse -ErrorAction SilentlyContinue","/bin/setup_kubelet_service.ps1"],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "uninstall": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "pre_upgrade": {
+      "priority": 100,
+      "uninstall": "no",
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "post_upgrade": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "files": []
+}
