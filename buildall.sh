@@ -1,8 +1,12 @@
+./createimage.sh
 ./getcni.sh
 ./getdocker.sh
 ./getkube.sh
 ./getnode.sh
+./getnssm.sh
 ./getovn.sh
 ./getovs.sh
+./getpause.sh
 ./getprewin.sh
 ./getsdn.sh
+./pushimage.sh
