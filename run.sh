@@ -6,7 +6,7 @@ oc delete dc $pname
 oc delete is $pname
 oc delete sa $pname
 oc delete project $pname
-sleep 3
+sleep 20
 oc new-project $pname
 oc import-image $pname --from=docker.io/glennswest/$pname:$GIT_COMMIT --confirm
 oc delete  istag/$pname:latest
