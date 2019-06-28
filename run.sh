@@ -12,4 +12,4 @@ oc import-image $pname --from=docker.io/glennswest/$pname:$GIT_COMMIT --confirm
 oc delete  istag/$pname:latest
 oc new-app glennswest/$pname:$GIT_COMMIT --token=$(oc sa get-token $pname) 
 #export defaultdomain=$(oc describe route openshift-image-registry --namespace=default | grep "Requested Host" | cut -d ":" -f 2 | cut -d "." -f 2-)
-oc expose svc/winoperatordat 
+oc expose svc/winoperatordata
