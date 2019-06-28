@@ -8,7 +8,7 @@ FROM scratch
 VOLUME /tmp
 WORKDIR /root/
 COPY --from=builder /go/bin/winoperatordata /go/bin/winoperatordata
-ADD wcontent/ /data
-ADD templates /data
+ADD wcontent/content /data/content/
+ADD templates/* /data/templates/
 EXPOSE 8080
 ENTRYPOINT ["/go/bin/winoperatordata"]
