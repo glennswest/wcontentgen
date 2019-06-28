@@ -9,5 +9,6 @@ VOLUME /tmp
 WORKDIR /root/
 COPY --from=builder /go/bin/winoperatordata /go/bin/winoperatordata
 ADD wcontent/ /data
+ADD templates /data
 EXPOSE 8080
 ENTRYPOINT ["/go/bin/winoperatordata"]
