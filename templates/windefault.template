@@ -1,3 +1,17 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:97b42486aed3040a8413b3961336c58d2a9999564903d046658e743c49fa36d4
-size 492
+{
+  "name":          "win2019",
+  "version":       "0.001",
+  "description":    "Initial Version of Win2019",
+  "install_message": "OpenShift Windows 4.x Windows 2019 ",
+  "packages": ["prewin1809_v1.0",
+               "docker_v1.0.1",
+               "pause_v1.0.1",
+               "nssm_2.24",
+               "node_1.0.2",
+               "cni_0.3.1",
+               "sdn_v1.0.1",
+               "ovn_16e1a3cf",
+               "ovs_2.70beta",
+               "kube_v1.11.3"
+               ]
+}
