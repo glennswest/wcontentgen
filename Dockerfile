@@ -8,7 +8,7 @@ FROM scratch
 VOLUME /tmp
 WORKDIR /root/
 COPY --from=builder /go/bin/winoperatordata /go/bin/winoperatordata
-RUN mkdir /data
+mkdir /data
 COPY wcontent/* /data
 EXPOSE 8080
 ENTRYPOINT ["/go/bin/winoperatordata"]
