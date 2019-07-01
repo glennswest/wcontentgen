@@ -6,7 +6,7 @@
   "package_url":     "",
   "install": {
       "lprecmds": [],
-      "commands": ["/bin/wna"],
+      "commands": ["/bin/wna","echo done"],
       "lpstcmds": [],
       "reboot":   "no"
       }
