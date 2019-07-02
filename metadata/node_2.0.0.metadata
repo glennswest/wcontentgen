@@ -6,7 +6,8 @@
   "package_url":     "",
   "install": {
       "lprecmds": [],
-      "commands": ["/bin/wna","echo done"],
+      "commands": ["/bin/wna",
+                   "mv -Force /etc/kubernetes/kubelet.conf.windows /etc/kubernetes/kubelet.conf"],
       "lpstcmds": [],
       "reboot":   "no"
       }
