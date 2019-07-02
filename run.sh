@@ -8,6 +8,8 @@ oc delete sa $pname
 oc delete project $pname
 sleep 30
 oc new-project $pname
+sleep 10
+oc project $pname
 oc import-image $pname --from=docker.io/glennswest/$pname:$GIT_COMMIT --confirm
 oc delete  istag/$pname:latest
 oc new-app glennswest/$pname:$GIT_COMMIT --token=$(oc sa get-token $pname) 
