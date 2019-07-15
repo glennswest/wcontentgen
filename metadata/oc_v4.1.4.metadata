@@ -1,0 +1,36 @@
+{
+  "name":          "oc",
+  "version":       "v4.1.4",
+  "description":    "Openshift Windows Client for 4.1.4",
+  "install_message": "",
+  "package_url":     "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/",
+  "install": {
+      "lprecmds": [],
+      "commands": ["unzip c:/k/tmp/oc.tar.gz -d /k/tmp/oc","copy /k/tmp/oc/oc.exe /bin"],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "uninstall": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "pre_upgrade": {
+      "priority": 100,
+      "uninstall": "no",
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "post_upgrade": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "files": []
+}
