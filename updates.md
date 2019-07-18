@@ -3,3 +3,4 @@ winnodeman: Sun Jun 30 06:02:28 2019 -0500 9c3e758 gwest@redhat.com Update build
 winnodeman: Mon Jul 1 00:26:41 2019 +0800 a53dd11 gwest@redhat.com fix build.sh
 winnodeman: Mon Jul 1 00:26:41 2019 +0800 a53dd11 gwest@redhat.com fix build.sh
 winnodeman: Fri Jul 19 02:57:22 2019 +0800 a2ac0b0 gwest@redhat.com Add support for saving variables to /k/settings/xxx/vname and limit environment size in windows
+winnodeman: Fri Jul 19 02:57:22 2019 +0800 a2ac0b0 gwest@redhat.com Add support for saving variables to /k/settings/xxx/vname and limit environment size in windows
