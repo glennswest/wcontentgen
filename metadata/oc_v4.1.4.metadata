@@ -6,7 +6,8 @@
   "package_url":     "https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/",
   "install": {
       "lprecmds": [],
-      "commands": ["Expand-Archive -Force -LiteralPath c:/k/tmp/oc.zip -DestinationPath C:/k/tmp/oc;copy /k/tmp/oc/oc.exe /bin"],
+      "commands": ["Expand-Archive -Force -LiteralPath c:/k/tmp/oc.zip -DestinationPath C:/k/tmp/oc",
+                   "copy /k/tmp/oc/oc.exe /bin"],
       "lpstcmds": [],
       "reboot":   "no"
       }
