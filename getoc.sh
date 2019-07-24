@@ -6,7 +6,7 @@ mkdir wip/k
 mkdir wip/k/tmp
 export VERSION=v4.1.4
 export COMPNAME=oc
-export KUBEURL=https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/openshift-client-windows-4.1.4.zip
+export KUBEURL=https://mirror.openshift.com/pub/openshift-v4/clients/ocp/4.1.4/openshift-client-windows-4.1.4.zip
 cp files/${COMPNAME}_${VERSION}/bin/* wip/bin
 rm wcontent/content/${COMPNAME}_$VERSION.ign
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool ar ../wcontent/content/${COMPNAME}_$VERSION.ign ${KUBEURL} /k/tmp/oc.zip )
