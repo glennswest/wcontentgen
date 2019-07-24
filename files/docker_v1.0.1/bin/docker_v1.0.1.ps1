@@ -2,7 +2,7 @@ Write-Output "Docker Install Starting"
 $ErrorActionPreference = "Stop"
 $DOCKER_SERVICE_NAME = "Docker"
 Find-PackageProvider -Name "Nuget" | Install-PackageProvider -Force
-Install-Module -Name "DockerMsftProvider" -Repository "PSGallery" -Force
+Find-PackageProvider DockerMsftProvider | Install-PackageProvider
 Install-Package -Name "Docker" -ProviderName "DockerMsftProvider" -Force 
 Start-Sleep -s 30
 Set-Service $DOCKER_SERVICE_NAME -StartupType Disabled
