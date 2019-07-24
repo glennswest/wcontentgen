@@ -11,7 +11,7 @@
                "node_2.0.0",
                "cni_0.3.1",
                "sdn_v1.0.1",
-               "ovn_16e1a3c",
+               "ovn_16e1a3cf",
                "ovs_2.70beta",
                "kube_v1.13.6"
                ]
