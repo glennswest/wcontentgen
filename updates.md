@@ -13,3 +13,4 @@ winnodeman: Wed Jul 24 08:47:23 2019 +0800 18dc2d2 gwest@redhat.com Add a cd to 
 winnodeman: Wed Jul 24 08:47:23 2019 +0800 18dc2d2 gwest@redhat.com Add a cd to be in dir for build
 winnodeman: Wed Jul 24 08:50:00 2019 +0800 83db174 gwest@redhat.com Remove go get ./...
 winnodeman: Wed Jul 24 09:16:38 2019 +0800 9ef6703 gwest@redhat.com Add debug
+winnodeman: Wed Jul 24 09:31:46 2019 +0800 9bddbfd gwest@redhat.com Make sure path is fully created for long env variables
