@@ -1,6 +1,6 @@
-./createimage.sh
 ./getcni.sh
 ./getdocker.sh
+./getoc.sh
 ./getkube.sh
 ./getnode.sh
 ./getnssm.sh
@@ -9,4 +9,4 @@
 ./getpause.sh
 ./getprewin.sh
 ./getsdn.sh
-./pushimage.sh
+./build.sh
