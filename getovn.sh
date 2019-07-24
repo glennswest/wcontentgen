@@ -17,11 +17,11 @@ rm wcontent/content/${COMPNAME}_${VERSION}.ign
 cp metadata/${COMPNAME}_${VERSION}.metadata wip/bin/metadata
 cp files/${COMPNAME}_${VERSION}/bin/*.ps1 wip/bin
 cp files/${COMPNAME}_${VERSION}/cni/* wip/cni
-(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a wcontent/content/${COMPNAME}_${VERSION}.ign bin)
-(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a wcontent/content/${COMPNAME}_${VERSION}.ign cni)
-(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a wcontent/content/${COMPNAME}_${VERSION}.ign k)
-(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool um wcontent/content/${COMPNAME}_${VERSION}.ign bin/metadata/${COMPNAME}_${VERSION}.metadata)
-(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a wcontent/content/${COMPNAME}_${VERSION}.ign bin/metadata)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ../wcontent/content/${COMPNAME}_${VERSION}.ign bin)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ../wcontent/content/${COMPNAME}_${VERSION}.ign cni)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ../wcontent/content/${COMPNAME}_${VERSION}.ign k)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool um ../wcontent/content/${COMPNAME}_${VERSION}.ign bin/metadata/${COMPNAME}_${VERSION}.metadata)
+(cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ../wcontent/content/${COMPNAME}_${VERSION}.ign bin/metadata)
 $GOPATH/src/github.com/glennswest/libignition/igntool/igntool ls wcontent/content/${COMPNAME}_${VERSION}.ign
 cat wip/bin/metadata/${COMPNAME}_${VERSION}.metadata
 ./mvtocontainer.sh
