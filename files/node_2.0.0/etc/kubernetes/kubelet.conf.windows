@@ -1,0 +1,19 @@
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+clusterDNS:
+  - 172.30.0.10
+clusterDomain: cluster.local
+maxPods: 250
+rotateCertificates: true
+runtimeRequestTimeout: 10m
+serializeImagePulls: false
+staticPodPath: /etc/kubernetes/manifests
+systemReserved:
+  cpu: 500m
+  memory: 500Mi
+featureGates:
+  RotateKubeletServerCertificate: true
+  ExperimentalCriticalPodAnnotation: true
+  SupportPodPidsLimit: true
+  LocalStorageCapacityIsolation: false
+serverTLSBootstrap: true

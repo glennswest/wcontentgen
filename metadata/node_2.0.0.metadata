@@ -2,11 +2,12 @@
   "name":          "node",
   "version":       "2.0.0",
   "description":    "Node Management",
-  "install_message": "Dynamic creation of node connection data",
+  "install_message": "Ignition Based TLS Bootstrap For Windows",
   "package_url":     "",
   "install": {
       "lprecmds": [],
-      "commands": [],
+      "commands": ["/bin/wna",
+                   "mv -Force /etc/kubernetes/kubelet.conf.windows /etc/kubernetes/kubelet.conf"],
       "lpstcmds": [],
       "reboot":   "no"
       }
