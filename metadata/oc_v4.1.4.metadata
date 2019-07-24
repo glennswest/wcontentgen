@@ -9,7 +9,7 @@
       "commands": ["Expand-Archive -Force -LiteralPath c:/k/tmp/oc.zip -DestinationPath C:/k/tmp/oc",
                    "copy /k/tmp/oc/oc.exe /bin",
                    "mkdir /Users/Administrator/.kube",
-                   "copy /Program Files/WindowsNodeManager/settings/env/settings/kubeconfigdata /Users/Administrator/.kube/config"],
+                   "copy '/Program Files/WindowsNodeManager/settings/env/settings/kubeconfigdata' /Users/Administrator/.kube/config"],
       "lpstcmds": [],
       "reboot":   "no"
       }
