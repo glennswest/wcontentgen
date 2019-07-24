@@ -11,3 +11,4 @@ winnodeman: Wed Jul 24 08:46:32 2019 +0800 4913bfd gwest@redhat.com Fix exe loca
 winnodeman: Wed Jul 24 08:47:23 2019 +0800 18dc2d2 gwest@redhat.com Add a cd to be in dir for build
 winnodeman: Wed Jul 24 08:47:23 2019 +0800 18dc2d2 gwest@redhat.com Add a cd to be in dir for build
 winnodeman: Wed Jul 24 08:47:23 2019 +0800 18dc2d2 gwest@redhat.com Add a cd to be in dir for build
+winnodeman: Wed Jul 24 08:50:00 2019 +0800 83db174 gwest@redhat.com Remove go get ./...
