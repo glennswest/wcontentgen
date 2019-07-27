@@ -5,7 +5,7 @@ if (Get-Service docker -ErrorAction SilentlyContinue)
 }
 
 # Download the zip file.
-$json = Invoke-WebRequest https://download.docker.com/components/engine/windows-server/index.json | ConvertFrom-Json
+$json = Invoke-WebRequest -UseBasicparsing https://download.docker.com/components/engine/windows-server/index.json | ConvertFrom-Json
 $version = $version = $json.channels.'18.09'.version
 $url = $json.versions.$version.url
 $zipfile = Join-Path "$env:USERPROFILE\Downloads\" $json.versions.$version.url.Split('/')[-1]
