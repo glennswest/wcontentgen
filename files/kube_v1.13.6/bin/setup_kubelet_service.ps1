@@ -14,4 +14,5 @@ nssm set ${serviceName} AppRotateSeconds 86400
 nssm set ${serviceName} AppRotateBytes 1048576
 Start-Service kubelet-ocp
 sleep 10
-oc get csr -ojson | jq -r '.items[] | select(.status == {} ) | .metadata.name' | xargs oc adm certificate approve
+$x = oc get csr -ojson | ConvertFrom-Json
+$x.Items.metadata.name | %{oc adm certificate approve $_}
