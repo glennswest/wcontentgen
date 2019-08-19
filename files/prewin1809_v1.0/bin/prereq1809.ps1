@@ -50,6 +50,28 @@ if($env:item -notin $systemPath) {
   $systemPath += $env:item
   [System.Environment]::SetEnvironmentVariable("PATH", ($systemPath -join ';'), "Machine")
   }
+# Fixup firewall rules
+$ErrorActionPreference = "Stop"
+$name = "kubelet"
+$rule = Get-NetFirewallRule -Name $name -ErrorAction SilentlyContinue
+if($rule) {
+    # Delete existing rule if found
+    Remove-NetFirewallRule -InputObject $rule
+    }
+New-NetFirewallRule -Name $name -DisplayName 'Kubernetes Node' `
+                    -Enabled True -Direction Inbound `
+                    -Protocol TCP -Action Allow -LocalPort 10250
+#Add port 6081 to windows firewall rules
+$ErrorActionPreference = "Stop"
+$name = "ovn.6081"
+$rule = Get-NetFirewallRule -Name $name -ErrorAction SilentlyContinue
+if($rule) {
+    # Delete existing rule if found
+    Remove-NetFirewallRule -InputObject $rule
+    }
+New-NetFirewallRule -Name $name -DisplayName $name -Enabled True `
+                    -Direction Inbound -Protocol UDP -Action Allow -LocalPort 6081
+
 # Reboot if needed
 if($reboot) {
     Write-Output "Rebooting computer"
