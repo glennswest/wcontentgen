@@ -1,7 +1,7 @@
 sleep 5
 $Env:hosttoken = [IO.File]::ReadAllText("C:\Program Files\WindowsNodeManager\data\ovn.key")
 $Env:hosttoken = $Env:hosttoken -replace "`t|`n|`r",""
-$Env:apiserver="https://${Env:master}:8443"
+$Env:apiserver="https://${Env:master}:6443"
 $Env:ovnnorth="tcp://${Env:masterip}:6641"
 $Env:ovnsouth="tcp://${Env:masterip}:6642"
 cd \cni
