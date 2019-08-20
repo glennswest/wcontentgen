@@ -13,7 +13,9 @@ rm ${wcontent}/content/${COMPNAME}_${VERSION}.ign
 cp metadata/${COMPNAME}_${VERSION}.metadata wip/bin/metadata
 cp files/${COMPNAME}_${VERSION}/bin/*.ps1 wip/bin
 cp files/${COMPNAME}_${VERSION}/k/data/* wip/k/data/
-wget https://cloudbase.it/downloads/openvswitch-hyperv-installer-beta.msi -O wip/bin/openvswitch-hyperv-installer-beta.msi
+#wget https://cloudbase.it/downloads/openvswitch-hyperv-installer-beta.msi -O wip/bin/openvswitch-hyperv-installer-beta.msi
+# Temp to try this version
+wget https://cloudbase.it/downloads/openvswitch-hyperv-2.7.0-certified.msi -O wip/bin/openvswitch-hyperv-installer-beta.msi
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool a ${wcontent}/content/${COMPNAME}_${VERSION}.ign k)
 (cd wip;$GOPATH/src/github.com/glennswest/libignition/igntool/igntool um ${wcontent}/content/${COMPNAME}_${VERSION}.ign bin/metadata/${COMPNAME}_${VERSION}.metadata)
