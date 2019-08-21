@@ -1,4 +1,4 @@
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = 'SilentlyContinue'
 $env:item = ${env:ProgramFiles} + "\Cloudbase Solutions\Open vSwitch\bin\"
 $systemPath = [System.Environment]::GetEnvironmentVariable("PATH", "Machine") -split ';'
 if($env:item -notin $systemPath) {
