@@ -70,15 +70,15 @@ try {
     Stop-Service "ovs-vswitchd" -Force -ErrorAction SilentlyContinue
     Disable-OVSOnHNSNetwork $net.ID
     $bridgeName = "vEthernet ($($net.NetworkAdapterName))"
-    ovs-vsctl.exe --timeout $OVSCmdTimeout --if-exists --no-wait del-br "$bridgeName"
+    ovs-vsctl.exe --db="unix:C:/ProgramData/openvswitch/db.sock" --timeout $OVSCmdTimeout --if-exists --no-wait del-br "$bridgeName"
     if($LASTEXITCODE) {
         Throw "Failed to cleanup existing OVS bridge"
     }
-    ovs-vsctl.exe --timeout $OVSCmdTimeout --no-wait --may-exist add-br "$bridgeName"
+    ovs-vsctl.exe --db="unix:C:/ProgramData/openvswitch/db.sock" --timeout $OVSCmdTimeout --no-wait --may-exist add-br "$bridgeName"
     if($LASTEXITCODE) {
         Throw "Failed to add the OVS bridge"
     }
-    ovs-vsctl.exe --timeout $OVSCmdTimeout --no-wait --may-exist add-port "$bridgeName" "$($net.NetworkAdapterName)"
+    ovs-vsctl.exe --db="unix:C:/ProgramData/openvswitch/db.sock" --timeout $OVSCmdTimeout --no-wait --may-exist add-port "$bridgeName" "$($net.NetworkAdapterName)"
     if($LASTEXITCODE) {
         Throw "Failed to add the HNS interface to OVS bridge"
     }
@@ -90,5 +90,4 @@ try {
     Write-Output $_.ScriptStackTrace
     exit 1
 }
-Shutdown -r -f -t 0
-Start-Sleep -s 60
+exit 0
