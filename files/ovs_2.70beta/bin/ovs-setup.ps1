@@ -7,8 +7,4 @@ if($env:item -notin $systemPath) {
   }
 Set-Service -Name ovsdb-server -StartupType Automatic
 Start-Service ovsdb-server
-sleep 10
-$GUID = (New-Guid).Guid; Write-Output $GUID
-ovs-vsctl --db="unix:C:/ProgramData/openvswitch/db.sock" set Open_vSwitch . external_ids:system-id=$guid
-
-
+start-process -verb runAs "powershell" -argumentlist "\bin\setovsguid.ps1"
