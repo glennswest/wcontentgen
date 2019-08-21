@@ -8,7 +8,7 @@
       "priority": 100,
       "commands": ["certutil -addstore -f \"TrustedPublisher\" c:\\k\\data\\cloudbase.sst",
                    "msiexec /i \\bin\\openvswitch-hyperv-installer-beta.msi ADDLOCAL=\"OpenvSwitchCLI,OpenvSwitchDriver,OVNHost\" /qn /l*v log.txt",
-                   "sleep 10",
+                   "sleep 15",
                    "\\bin\\ovs-setup.ps1"]
       "reboot":   "no"
       }
