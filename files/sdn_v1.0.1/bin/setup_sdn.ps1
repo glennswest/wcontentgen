@@ -90,4 +90,5 @@ try {
     Write-Output $_.ScriptStackTrace
     exit 1
 }
-exit 0
+Shutdown -r -f -t 0
+Start-Sleep -s 60
