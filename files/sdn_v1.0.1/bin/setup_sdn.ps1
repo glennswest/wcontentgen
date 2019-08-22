@@ -65,6 +65,8 @@ try {
     Import-Module HNSHelper -DisableNameChecking
     Import-Module OVS -DisableNameChecking
 
+    sleep 10
+
     $net = New-OVSNetwork
     Set-Service "ovs-vswitchd" -StartupType Disabled
     Stop-Service "ovs-vswitchd" -Force -ErrorAction SilentlyContinue
