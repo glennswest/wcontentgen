@@ -8,7 +8,7 @@
       "lprecmds": [],
       "commands": ["/bin/genovnkey.ps1",
                    "/bin/genovnconf.ps1",
-                   "/bin/setup_kubeovn_service.ps1  2>&1 /k/logs/setup_kubeovn.out"],
+                   "/bin/setup_kubeovn_service.ps1  2>&1 > /k/logs/setup_kubeovn.out"],
       "lpstcmds": [],
       "reboot":   "no"
       }
