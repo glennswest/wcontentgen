@@ -8,7 +8,7 @@
       "lprecmds": [],
       "commands": ["tar xzf /k/tmp/kubernets.tar.gz -C /k/tmp",
                    "copy /k/tmp/kubernetes/node/bin/* /bin",
-                   "/bin/setup_kubelet_service.ps1  2>&1 > /k/logs/setup_kubelet.out"],
+                   "/bin/setup_kubelet_service.ps1"],
       "lpstcmds": [],
       "reboot":   "no"
       }

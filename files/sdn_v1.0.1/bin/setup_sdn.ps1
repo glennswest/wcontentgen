@@ -90,6 +90,8 @@ try {
     Write-Output "The SDN network setup is ready"
 } catch {
     Write-Output $_.ScriptStackTrace
+    echo $null >> /k/tmp/sdn_v1.0.1.done
     exit 1
 }
+echo $null >> /k/tmp/sdn_v1.0.1.done
 exit 0
