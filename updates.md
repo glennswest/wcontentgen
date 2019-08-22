@@ -6,3 +6,4 @@ winnodeman: Thu Aug 22 07:13:29 2019 -0500 ae2875e gwest@redhat.com Merge branch
 winnodeman: Thu Aug 22 07:13:29 2019 -0500 ae2875e gwest@redhat.com Merge branch 'master' of github.com:glennswest/winnodemanager
 winnodeman: Thu Aug 22 07:13:29 2019 -0500 ae2875e gwest@redhat.com Merge branch 'master' of github.com:glennswest/winnodemanager
 winnodeman: Thu Aug 22 08:19:41 2019 -0500 dc7da3a gwest@redhat.com Change to use WriteFile to save run command
+winnodeman: Thu Aug 22 08:44:00 2019 -0500 7470026 gwest@redhat.com Add automatic logging per component
