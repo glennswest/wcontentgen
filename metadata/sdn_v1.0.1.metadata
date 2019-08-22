@@ -8,7 +8,7 @@
       "priority": 100,
       "lprecmds": [],
       "commands": ["$Env:ovs_network_name=\"external\"",
-                   "Write ('\"' + $Env:ovn_host_subnet + '\"') > C:/k/host.subnet",
+                   "echo `"${Env:ovn_host_subnet}`" | Out-File C:\k\host.subnet",
                    "/bin/setup_sdn.ps1 -OVSNetworkName $Env:ovs_network_name -SubnetFile /k/host.subnet  2>&1 > /k/logs/setup_sdn.out"],
       "lpstcmds": [],
       "reboot":   "no"
