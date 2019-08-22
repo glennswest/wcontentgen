@@ -11,3 +11,4 @@ winnodeman: Thu Aug 22 08:44:57 2019 -0500 6c7f272 gwest@redhat.com Make sure us
 winnodeman: Thu Aug 22 09:10:33 2019 -0500 db00999 gwest@redhat.com Make sure we wait for cmd execution
 winnodeman: Thu Aug 22 09:31:41 2019 -0500 4ae6be6 gwest@redhat.com Use start_process to force wait for commands
 winnodeman: Thu Aug 22 10:37:08 2019 -0500 cdc0613 gwest@redhat.com Setup done file to make sure things are completed
+winnodeman: Thu Aug 22 10:54:14 2019 -0500 c7187da gwest@redhat.com Make sure done file is created in run script
