@@ -7,7 +7,7 @@ Param(
     [int]$OVSCmdTimeout=30
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = 'SilentlyContinue'
 
 
 function Get-NetworkInfo {
@@ -65,11 +65,14 @@ try {
     Import-Module HNSHelper -DisableNameChecking
     Import-Module OVS -DisableNameChecking
 
-    sleep 10
-
+    echo "New-OVSNetwork"
     $net = New-OVSNetwork
+    echo "Disable ovs-vswitchd"
     Set-Service "ovs-vswitchd" -StartupType Disabled
+    echo "Stop Service ovs-vswitchd"
     Stop-Service "ovs-vswitchd" -Force -ErrorAction SilentlyContinue
+    echo "Disable OVSOnHNSNetwork"
+    echo $net.ID
     Disable-OVSOnHNSNetwork $net.ID
     $bridgeName = "vEthernet ($($net.NetworkAdapterName))"
     ovs-vsctl.exe --db="unix:C:/ProgramData/openvswitch/db.sock" --timeout $OVSCmdTimeout --if-exists --no-wait del-br "$bridgeName"
@@ -84,8 +87,10 @@ try {
     if($LASTEXITCODE) {
         Throw "Failed to add the HNS interface to OVS bridge"
     }
+    echo "Enable OVSOnHNS Network"
     Enable-OVSOnHNSNetwork $net.ID
     Set-Service "ovs-vswitchd" -StartupType Automatic
+    echo "Start Service - ovs"
     Start-Service "ovs-vswitchd"
     Write-Output "The SDN network setup is ready"
 } catch {
