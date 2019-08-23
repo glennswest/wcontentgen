@@ -13,6 +13,6 @@
                "ovs_2.70beta",
                "sdn_v1.0.1",
                "ovn_16e1a3cf",
-               "kube_v1.13.6"
+               "kube_v1.14.0"
                ]
 }

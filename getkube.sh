@@ -5,7 +5,7 @@ mkdir wip/bin/metadata
 mkdir wip/k
 mkdir wip/k/logs
 touch wip/k/logs/kubelet.log
-export VERSION=v1.13.6
+export VERSION=v1.14.0
 export COMPNAME=kube
 export KUBEURL=https://dl.k8s.io/${VERSION}/kubernetes-node-windows-amd64.tar.gz 
 cp files/${COMPNAME}_${VERSION}/bin/* wip/bin
