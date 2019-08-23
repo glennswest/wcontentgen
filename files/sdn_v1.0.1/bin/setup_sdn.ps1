@@ -31,27 +31,41 @@ function Get-NetworkInfo {
 }
 
 function New-OVSNetwork {
+    echo "Get-NetRoute"
     $primaryIfIndex = (Get-NetRoute -DestinationPrefix "0.0.0.0/0").ifIndex
+    echo "Get NetAdapter"
     $mainInterface = Get-NetAdapter -InterfaceIndex $primaryIfIndex
+    echo "Get HnsNetwork"
     [array]$networks = Get-HnsNetwork | Where-Object {
         ($_.Name -eq $OVSNetworkName) -and ($_.Type -eq "Transparent")
     }
     if($networks) {
+        echo "Networks"
         if($networks.Count -gt 1) {
+            echo "Wierd #1"
             # If we reach this, something weird happened
             Throw "More than one OVS network was found"
         }
+        echo "Get Adapter Name"
         $adapterName = $networks[0].NetworkAdapterName
+        echo $adapterName
         # Clean up existing network to refresh its subnet and gateway values
+        echo "Remove HNSNetwork"
         $networks | Remove-HnsNetwork
     } else {
+        echo "Adapter Name"
+        echo $adapterName
         $adapterName = $mainInterface.InterfaceAlias
     }
+    echo "Get Network Info"
     $netInfo = Get-NetworkInfo
+    echo "New-HnsNetwork"
     $net = New-HnsNetwork -Name $OVSNetworkName -Type "Transparent" -AdapterName $adapterName `
                           -AddressPrefix $netInfo["subnet"] -Gateway $netInfo["gateway"]
     # Check if the virtual adapter is present post HNS network creation
+    echo "check virtual adapter"
     $virtualAdapterName = "vEthernet ($($net.NetworkAdapterName))"
+    echo "Get NetAdapter after HNS Network crate"
     $adapter = Get-NetAdapter -Name $virtualAdapterName -ErrorAction SilentlyContinue
     if(!$adapter) {
         Throw "The virtual adapter $virtualAdapterName doesn't exist post HNS network creation"
