@@ -23,3 +23,4 @@ winnodeman: Fri Aug 23 12:10:13 2019 -0500 c81c166 gwest@redhat.com Fix comments
 winnodeman: Fri Aug 23 12:11:05 2019 -0500 8b7152e gwest@redhat.com Fix typo
 winnodeman: Fri Aug 23 12:11:05 2019 -0500 8b7152e gwest@redhat.com Fix typo
 winnodeman: Fri Aug 23 12:11:05 2019 -0500 8b7152e gwest@redhat.com Fix typo
+winnodeman: Fri Aug 23 12:12:58 2019 -0500 d9db19e gwest@redhat.com Fix logging for scheduled job
