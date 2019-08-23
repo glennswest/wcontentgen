@@ -19,3 +19,4 @@ winnodeman: Fri Aug 23 11:12:28 2019 -0500 2368009 gwest@redhat.com Cleanup
 winnodeman: Fri Aug 23 11:14:03 2019 -0500 6d4075b gwest@redhat.com Fix missing dep
 winnodeman: Fri Aug 23 11:14:03 2019 -0500 6d4075b gwest@redhat.com Fix missing dep
 winnodeman: Fri Aug 23 11:16:13 2019 -0500 9dd7284 gwest@redhat.com Fix type for check job
+winnodeman: Fri Aug 23 12:10:13 2019 -0500 c81c166 gwest@redhat.com Fix comments to not disable rest of line
