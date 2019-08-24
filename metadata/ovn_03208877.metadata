@@ -1,0 +1,38 @@
+{
+  "name":          "kubeovn",
+  "version":       "03208877",
+  "description":    "kubeovn - kubernets sdn using OpenVswitch",
+  "install_message": "Using Kubeovn from https://github.com/ovn-org/ovn-kubernetes - Commit 03208877",
+  "package_url":     "https://github.com/ovn-org/ovn-kubernetes",
+  "install": {
+      "lprecmds": [],
+      "commands": ["/bin/genovnkey.ps1",
+                   "/bin/genovnconf.ps1",
+                   "/bin/setup_kubeovn_service.ps1"],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "uninstall": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "pre_upgrade": {
+      "priority": 100,
+      "uninstall": "no",
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "post_upgrade": {
+      "priority": 100,
+      "lprecmds": [],
+      "commands": [],
+      "lpstcmds": [],
+      "reboot":   "no"
+      }
+  "files": []
+}
