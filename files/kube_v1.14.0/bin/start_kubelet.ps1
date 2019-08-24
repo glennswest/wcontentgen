@@ -9,7 +9,7 @@ c:\bin\kubelet.exe --hostname-override="$Env:lhost" --v=6 `
     --image-pull-progress-deadline=20m `
     --cgroups-per-qos=false `
     --enforce-node-allocatable="" `
-    --pod-infra-container-image=kubeletwin/pause:latest `
+    --pod-infra-container-image=mcr.microsoft.com/k8s/core/pause:1.2.0 `
     --network-plugin=cni `
     --cni-bin-dir="c:\bin" `
     --cni-conf-dir "c:\cni" `
