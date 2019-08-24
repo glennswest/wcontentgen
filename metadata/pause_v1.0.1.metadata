@@ -6,9 +6,7 @@
   "package_url":     "",
   "install": {
       "priority": 100,
-      "commands":  ["docker pull mcr.microsoft.com/windows/nanoserver:1809",
-                    "cd /k/pause",
-                    "docker build . -t kubeletwin/pause"]
+      "commands":  ["docker pull mcr.microsoft.com/k8s/core/pause:1.2.0"]
       "reboot":   "no"
       }
   "uninstall": {
