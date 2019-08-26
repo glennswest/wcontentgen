@@ -5,8 +5,7 @@ C:\bin\ovnkube.exe --init-node $env:COMPUTERNAME.ToLower() `
                    -cni-conf-dir="C:\cni" `
                    --nodeport `
                    --k8s-service-cidr=172.30.0.0/16 `
-                   --loglevel=4 `
-                   --gateway-mode=local
+                   --loglevel=4 
 
 
 
