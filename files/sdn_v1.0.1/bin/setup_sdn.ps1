@@ -112,5 +112,10 @@ try {
     echo $null >> /k/tmp/sdn_v1.0.1.done
     exit 1
 }
+sleep 4
+sleep 10
+$GUID = (New-Guid).Guid; Write-Output $GUID
+ovs-vsctl --db="unix:C:/ProgramData/openvswitch/db.sock" set Open_vSwitch . external_ids:system-id=$guid
+echo $guid
 echo $null >> /k/tmp/sdn_v1.0.1.done
 exit 0

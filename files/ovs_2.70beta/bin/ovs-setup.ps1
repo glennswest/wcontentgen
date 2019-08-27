@@ -7,4 +7,3 @@ if($env:item -notin $systemPath) {
   }
 Set-Service -Name ovsdb-server -StartupType Automatic
 Start-Service ovsdb-server
-start-process -verb runAs "powershell" -argumentlist "\bin\setovsguid.ps1"
