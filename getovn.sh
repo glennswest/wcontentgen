@@ -7,7 +7,7 @@ mkdir wip/k/logs
 mkdir wip/cni
 touch wip/k/logs/kubeovn.log
 export COMPNAME=ovn
-git clone https://github.com/glennswest/ovn-kubernetes  wip/ovn-kubernetes
+git clone https://github.com/ovn-org/ovn-kubernetes.git wip/ovn-kubernetes
 cd wip/ovn-kubernetes;export VERSION=`git rev-parse --short HEAD`;cd ../..
 (cd wip/ovn-kubernetes;cd go-controller;make clean;make windows)
 cp wip/ovn-kubernetes/go-controller/_output/go/windows/*.exe wip/bin
